@@ -1,10 +1,11 @@
-==============================================================================
+============================================================
 libcuPaHOF: CUDA library to calculate PaHOF on a GPU in C++.
-================
+============================================================
 Fernando Cobo Aguilera and Manuel J. Marin-Jimenez
 
 
-This software calculates the Pyramid of Accumulated Histograms of Optical Flow described in Marín et al. [1] 
+This software calculates the Pyramid of Accumulated Histograms of Optical Flow described 
+in Marín-Jiménez et al. [1] 
 --------------------------------------------------------------------------------
 
    Source-Code:   https://github.com/fcobo/libcupahof
@@ -12,16 +13,17 @@ This software calculates the Pyramid of Accumulated Histograms of Optical Flow d
 --------------------------------------------------------------------------------
 Contents of the package:
 --------------------------------------------------------------------------------
+- data - contains a pretrained SVM model for action recognition and test videos
 - include - contains all the software header files
 - src - contains all the software source files
 - tests - contains a program to test the library
-- makefile - used to compile the library, the documentation and the test program
 
 
 --------------------------------------------------------------------------------
 Requirements:
 --------------------------------------------------------------------------------
-This software has been tested on Windows 7 and Ubuntu 12.04 LTS (Precise Pangolin) with the following libraries:
+This software has been tested on Windows 7 and Ubuntu 12.04 LTS (Precise Pangolin) 
+with the following libraries:
 - OpenCV - v2.4.8 (required)
 - CUDA - v5.5 (required)
 
@@ -43,6 +45,11 @@ Open a terminal, and type in the command line the following instructions:
 If everything went well, both the library and test programs should have been
 created into <rootdir>/build subdirectories.
 
+You can run the test program by executing the following command:
+```
+cd <rootdir>
+cudahar --video data/person15_handwaving_d1_uncomp.avi 400 --gpu --fps --hit_threshold 0 --gr_threshold 1
+```
 
 --------------------------------------------------------------------------------
 Contact the authors:
