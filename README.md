@@ -48,8 +48,33 @@ created into <rootdir>/build subdirectories.
 You can run the test program by executing the following command:
 ```
 cd <rootdir>
-cudahar --video data/person15_handwaving_d1_uncomp.avi 400 --gpu --fps --hit_threshold 0 --gr_threshold 1
+cudahar --video data\person15_handwaving_d1_uncomp.avi 400 --hit_threshold 0 --gr_threshold 1 --classify data\train_svm.xml --gpu --fps 
 ```
+A pretrained SVM on `KTH actions dataset' is used for classification. 
+
+
+--------------------------------------------------------------------------------
+Citation:
+--------------------------------------------------------------------------------
+If you use this library for your publications, please, consider citing the 
+following publications:
+@article{marin2014paa,
+ author = {Marin-Jimenez, M. J. and Perez de la Blanca, N. and Mendoza, M. A.},
+ title  = {Human Action Recognition from simple feature pooling},
+ year = {2014},
+ journal = {Pattern Anal. Appl.},
+ volume    = {17},
+ number    = {1},
+ pages     = {17--36}
+}
+
+@misc{libcupahof,
+ author = {Cobo-Aguilera, Fernando and Marin-Jimenez, Manuel J.},
+ title = {{LibCuPaHOF}: A CUDA library for computing {PaHOF} descriptors in {C++}},
+ year = {2014},
+ note =   {Software available at \url{https://github.com/fcobo/libcupahof}}
+}
+
 
 --------------------------------------------------------------------------------
 Contact the authors:
@@ -61,7 +86,7 @@ Manuel J. Marin-Jimenez (advisor) - mjmarin@uco.es
 --------------------------------------------------------------------------------
 References:
 --------------------------------------------------------------------------------
-[1] Marín-Jiménez, M. J.; Pérez de la Blanca, N.; Mendoza, M. A.; (2012): "Human
+[1] Marín-Jiménez, M. J.; Pérez de la Blanca, N.; Mendoza, M. A.; (2014): "Human
 action recognition from simple feature pooling". Pattern Analysis and Applications
 Journal, vol.17 no.1, On page(s): 17 - 36
 
