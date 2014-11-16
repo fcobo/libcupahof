@@ -4,8 +4,7 @@ libcuPaHOF: CUDA library to calculate PaHOF on a GPU in C++.
 Fernando Cobo Aguilera and Manuel J. Marin-Jimenez
 
 
-This software calculates the Pyramid of Accumulated Histograms of Optical Flow described 
-in Marín-Jiménez et al. [1] 
+This software calculates the Pyramid of Accumulated Histograms of Optical Flow described in Marín-Jiménez et al. [1] 
 --------------------------------------------------------------------------------
 
    Source-Code:   https://github.com/fcobo/libcupahof
