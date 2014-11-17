@@ -48,15 +48,42 @@ int main(int argc, char** argv){
 	 Args args = Args::Read(argc, argv);
 
 	 if(args.gpu_){
-      cout << "Initializing CUDA graphic card..."<<endl;
 
-	  if( cudaSuccess != cudaSetDevice(0)){
-		cerr << cudaGetLastError() << endl;
-		exit(EXIT_FAILURE);
-	  }
-	 cv::gpu::printShortCudaDeviceInfo(0);
+		//Initialize CUDA graphic card
+		cout << "Initializing CUDA graphic card..."<<endl;
+
+		cudaError_t error;
+
+		int ndevices = cv::gpu::getCudaEnabledDeviceCount();
+    
+	    if(ndevices == 0){
+	
+          cerr << "No CUDA-capable devices were detected by the installed CUDA driver" << endl;
+          cout << "Press to end";
+          getchar();
+          exit(EXIT_FAILURE);
+		}
+
+		if( cudaSuccess != (error = cudaSetDevice(0)) ){
+
+          cerr << "There was a problem during GPU initializaction.";
+
+          switch (error)
+          {
+          case 10:
+            cerr << "The device which has been supplied by the user does not correspond to a valid CUDA device." 
+                 << " Try to change cudaSetDevice() with another value."<<endl;
+            break;
+          default:
+            break;
+          }
+    
+        cout << "Press to end";
+        getchar();
+        exit(EXIT_FAILURE);
+		}
+		cv::gpu::printShortCudaDeviceInfo(0);
 	 }
-
 
 	 frames = args.frames_;
 	 len = args.len_;
