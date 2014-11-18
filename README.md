@@ -47,7 +47,7 @@ created into <rootdir>/build subdirectories.
 You can run the test program by executing the following command:
 ```
 cd <rootdir>
-cudahar --video data\person15_handwaving_d1_uncomp.avi 400 --hit_threshold 0 --gr_threshold 1 --classify data\train_svm.xml --gpu --fps 
+cudahar --video data/person15_handwaving_d1_uncomp.avi 400 --hit_threshold 0 --gr_threshold 1 --classify data\train_svm.xml --gpu --fps 
 ```
 A pretrained SVM on `KTH actions dataset' is used for classification. 
 
@@ -56,9 +56,9 @@ A pretrained SVM on `KTH actions dataset' is used for classification.
 Citation:
 --------------------------------------------------------------------------------
 If you use this library for your publications, please, consider citing the 
-following publications:
-@article{marin2014paa,
- author = {Marin-Jimenez, M. J. and Perez de la Blanca, N. and Mendoza, M. A.},
+following publications:<br>
+@article{marin2014paa,  
+author = {Marin-Jimenez, M. J. and Perez de la Blanca, N. and Mendoza, M. A.},
  title  = {Human Action Recognition from simple feature pooling},
  year = {2014},
  journal = {Pattern Anal. Appl.},
@@ -67,8 +67,8 @@ following publications:
  pages     = {17--36}
 }
 
-@misc{libcupahof,
- author = {Cobo-Aguilera, Fernando and Marin-Jimenez, Manuel J.},
+@misc{libcupahof,  
+author = {Cobo-Aguilera, Fernando and Marin-Jimenez, Manuel J.},
  title = {{LibCuPaHOF}: A CUDA library for computing {PaHOF} descriptors in {C++}},
  year = {2014},
  note =   {Software available at \url{https://github.com/fcobo/libcupahof}}
@@ -78,7 +78,7 @@ following publications:
 --------------------------------------------------------------------------------
 Contact the authors:
 --------------------------------------------------------------------------------
-Fernando Cobo Aguilera (developer) - i92coagf@uco.es / fcoboaguilera@gmail.com
+Fernando Cobo Aguilera (developer) - i92coagf@uco.es / fcoboaguilera@gmail.com<br>
 Manuel J. Marin-Jimenez (advisor) - mjmarin@uco.es
 
 
