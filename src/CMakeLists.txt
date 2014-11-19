@@ -4,11 +4,13 @@ INCLUDE (CheckIncludeFiles)
 # Make sure it finds the headers
 include_directories (${PROJECT_SOURCE_DIR}/include)
 
+FILE(GLOB hdrs2 "${PROJECT_SOURCE_DIR}/include/*.h*")
 FILE(GLOB hdrs "*.h*")
 FILE(GLOB srcs "*.c*")
 
 
 SET(hdrs ${hdrs})
+SET(hdrs2 ${hdrs2})
 SET(srcs ${srcs})
 
 
@@ -37,7 +39,7 @@ INSTALL(TARGETS ${PROJECT_NAME}
 	LIBRARY DESTINATION lib PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE COMPONENT main
 	ARCHIVE DESTINATION lib COMPONENT main)			# Install the dll.a file in lib directory
 
-INSTALL(FILES ${hdrs}
+INSTALL(FILES ${hdrs2}
 	DESTINATION include/${PROJECT_NAME}
 	COMPONENT main)
 

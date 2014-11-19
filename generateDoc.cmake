@@ -19,6 +19,7 @@
 # www.mip.informatik.uni-kiel.de/~jw
 #
 # Modified by Luis Díaz 2009 http://plagatux.es
+# Modified by mjmarin 2014: assuming that doc will be generated at SOURCE_DIR
 
 MACRO(GENERATE_DOCUMENTATION DOX_CONFIG_FILE)
 FIND_PACKAGE(Doxygen)
@@ -109,7 +110,7 @@ IF (DOXYGEN_FOUND)
 		ENDIF()
 	ENDIF () 
 
-	INSTALL(DIRECTORY "${PROJECT_BINARY_DIR}/doc/html/" DESTINATION "share/doc/lib${PROJECT_NAME}")
+	INSTALL(DIRECTORY "${PROJECT_SOURCE_DIR}/doc/html/" DESTINATION "share/doc/lib${PROJECT_NAME}")
 
 ENDIF(DOXYGEN_FOUND)
 ENDMACRO(GENERATE_DOCUMENTATION)

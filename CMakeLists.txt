@@ -1,7 +1,7 @@
 # CMake to build libpahof and test executable
 
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
-PROJECT(pahof)
+PROJECT(cupahof)
 
 FIND_PACKAGE(OpenCV REQUIRED)
 FIND_PACKAGE(CUDA REQUIRED)
